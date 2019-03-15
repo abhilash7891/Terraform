@@ -1,6 +1,6 @@
 provider "aws"
 {
     region="us-west-2"
-    shared_credentals_file="./aws/shared_credentilas_file"
+    shared_credentals_file="/home/centos/.aws/credentials"
     profile="Default"
 }

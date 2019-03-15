@@ -1,6 +1,6 @@
 provider "aws"
 {
-    name="aws"
-    shared_credentals_file="./aws/shared_credentilas_file"
+    region ="us-"
+    shared_credentals_file="/home/centos/.aws/credentails"
     profile="Default"
 }
