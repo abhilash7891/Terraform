@@ -3,7 +3,7 @@ resource "aws_vpc" "main"
     cidr_block="${var.vpc_cidr_Block}"
 }
 
-resource "aws_subnet" "subnet-count-[count.index]"
+resource "aws_subnet" "subnet-[count.index]"
 {
  count=3
     vpc_id="${aws_vpc.main.id}"
