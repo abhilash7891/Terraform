@@ -5,18 +5,18 @@ resource "aws_vpc" "main"
 
 resource "aws_subnet" "subnet1"
 {
-    vpc="${aws_vpc.main.id}"
+    vpc_id="${aws_vpc.main.id}"
     cidr_block="${var.subnet_cidr_Block[0]}"
 }
 
 resource "aws_subnet" "subnet2"
 {
-    vpc="${aws_vpc.main.id}"
+    vpc_id="${aws_vpc.main.id}"
     cidr_block="${var.subnet_cidr_Block[1]}"
 }
 
 resource "aws_subnet" "subnet3"
 {
-    vpc="${aws_vpc.main.id}"
+    vpc_id="${aws_vpc.main.id}"
     cidr_block="${var.subnet_cidr_Block[2]}"
 }
