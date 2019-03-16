@@ -5,6 +5,6 @@ variable "vpc_cidr_Block"
 
 variable "subnet_cidr_Block"
 {
-    type ="List"
+    type ="list"
     default="[10.0.0.0/16,10.0.1.0/16,10.0.2.0/16]"
 }
