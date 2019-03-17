@@ -11,9 +11,10 @@ variable "subnet_cidr_Block"
 
 variable "tags" {
     type = "map"
-
+default=
+{
     name= "Terraform"
     project="Terraform-Project"
     ennvironment="Dev"
-  
+} 
 }
