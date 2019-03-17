@@ -15,6 +15,6 @@ default=
 {
     name= "Terraform"
     project="Terraform-Project"
-    ennvironment="Dev"
+    environment="Dev"
 } 
 }
