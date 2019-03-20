@@ -1,8 +1,8 @@
-resource "aws_subnet" "subnet"
+resource "aws_subnet" "private_subnet"
 {
- count=3
+ count="${length(var.private_subnet_cidr_block)}"
     vpc_id="${aws_vpc.main.id}"
-    cidr_block="${var.subnet_cidr_Block[count.index]}"
+    cidr_block="${element(var.private_subnet_cidr_block.*.id,count.index)}"
     availability_zone="${data.aws_availability_zones.main.names[count.index]}"
 tags={
     name="${var.tags["name"]}"
