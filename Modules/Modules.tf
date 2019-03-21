@@ -7,8 +7,6 @@ Module "Network"
     public_subnet_cidr_block ="${var.public_subnet_cidr_block} "
 
 
-
-
 }
 
 
