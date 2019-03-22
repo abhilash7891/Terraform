@@ -1,7 +1,7 @@
 variable "vpc_cidr_block" { }
 variable "ENV" { }
 
-variable "Project-Name" { }
+variable "project-name" { }
 
 variable "created-by" {
     default = "Terraform"
