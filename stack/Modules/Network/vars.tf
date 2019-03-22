@@ -4,7 +4,7 @@ variable "created-by" {}
 variable "private_subnet_cidr_block" {
     type="list"
 }
-variable "public_subnet_cidr_block"  {
+variable "public_subnet_cidr_block" {
     type="list"
 }
 

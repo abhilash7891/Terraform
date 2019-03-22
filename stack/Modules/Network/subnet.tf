@@ -12,7 +12,7 @@ tags={
 }
 }
 
-/*
+
 resource "aws_subnet" "public_subnet"
 {
  count="${length(var.public_subnet_cidr_block)}"
@@ -26,4 +26,3 @@ tags={
     Created-By="${var.created-by}"
 }
 }
-*/
