@@ -7,7 +7,7 @@ resource "aws_subnet" "private_subnet"
 tags={
     
     Project-NAME="${var.project-name}"
-    Project-ENV="${ENV}"
+    Project-ENV="${var.ENV}"
     Created-By="${var.created-by}"
 }
 }
@@ -21,7 +21,7 @@ resource "aws_subnet" "public_subnet"
 tags={
     
     Project-NAME="${var.project-name}"
-    Project-ENV="${ENV}"
+    Project-ENV="${var.ENV}"
     Created-By="${var.created-by}"
 }
 }
