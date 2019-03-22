@@ -9,3 +9,14 @@ module "Network" {
 }
 
 
+module "Database" {
+  source                = "./Modules/Database"
+  ENV                   = "${var.ENV}"
+  VPC_ID                = "${module.Network.vpc_id}"
+  PUBLIC_SUBNETS        = "${module.Network.public_subnets}"
+  PRIVATE_SUBNETS       = "${module.Network.private_subnets}"
+  DB_INSTANCE_TYPE      = "${var.DB_INSTANCE_TYPE}"
+  DBUSER                = "${var.DBUSER}"
+  DBPASS                = "${var.DBPASS}"
+  VPC_CIDR              = "${var.VPC_CIDR}"
+}
