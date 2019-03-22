@@ -5,9 +5,10 @@ resource "aws_subnet" "private_subnet"
     cidr_block="${element(var.private_subnet_cidr_block,count.index)}"
     availability_zone="${data.aws_availability_zones.main.names[count.index]}"
 tags={
-    name="${var.tags["name"]}"
-    Project-name="${var.tags["project"]}"
+    
+    Project-name="${var.project_name}"
     project-ENV="${ENV}"
+    created-by="${var.created_by}"
 }
 }
 
@@ -18,8 +19,9 @@ resource "aws_subnet" "public_subnet"
     cidr_block="${element(var.public_subnet_cidr_block,count.index)}"
     availability_zone="${data.aws_availability_zones.main.names[count.index]}"
 tags={
-    name="${var.tags["name"]}"
-    Project-name="${var.tags["project"]}"
+    
+    Project-name="${var.project_name}"
     project-ENV="${ENV}"
+    created-by="${var.created_by}"
 }
 }
