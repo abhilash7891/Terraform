@@ -12,11 +12,8 @@ resource "aws_route_table" "public_route_table" {
     gateway_id = "${aws_internet_gateway.gw.id}"
   }
 }
-data "aws_route_table" "Private_route_table" {
-  subnet_id = "${aws_subnet.private_subnet.*.id}"
-}
 
-resource "aws_route_table" "private_RT" {
+resource "aws_route_table" "private_route_table" {
   vpc_id = "${aws_vpc.main.id}"
 
   route {
