@@ -4,7 +4,7 @@ resource "aws_internet_gateway" "gw" {
  }
 
 
-resource "aws_route_table" "public_RT" {
+resource "aws_route_table" "public_route_table" {
   vpc_id = "${aws_vpc.main.id}"
 
   route {
