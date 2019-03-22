@@ -4,13 +4,12 @@ resource "aws_subnet" "private_subnet"
     vpc_id="${aws_vpc.main.id}"
     cidr_block="${element(var.private_subnet_cidr_block,count.index)}"
     availability_zone="${data.aws_availability_zones.main.names[count.index]}"
-/*tags={
+tags={
     
     Project-NAME="${var.project_name}"
     Project-ENV="${ENV}"
     Created-By="${var.created_by}"
 }
-*/
 }
 
 resource "aws_subnet" "public_subnet"
@@ -19,11 +18,10 @@ resource "aws_subnet" "public_subnet"
     vpc_id="${aws_vpc.main.id}"
     cidr_block="${element(var.public_subnet_cidr_block,count.index)}"
     availability_zone="${data.aws_availability_zones.main.names[count.index]}"
-/*tags={
+tags={
     
     Project-NAME="${var.project_name}"
     Project-ENV="${ENV}"
     Created-By="${var.created_by}"
 }
-*/
 }
