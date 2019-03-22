@@ -1,6 +1,6 @@
 resource "aws_subnet" "private_subnet"
 {
- count="${length(var.priaws_subnetvate_subnet_cidr_block)}"
+ count="${length(var.private_subnet_cidr_block)}"
     vpc_id="${aws_vpc.main.id}"
     cidr_block="${element(var.private_subnet_cidr_block.*.id,count.index)}"
     availability_zone="${data.aws_availability_zones.main.names[count.index]}"
