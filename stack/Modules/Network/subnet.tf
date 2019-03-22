@@ -6,9 +6,9 @@ resource "aws_subnet" "private_subnet"
     availability_zone="${data.aws_availability_zones.main.names[count.index]}"
 tags={
     
-    Project-name="${var.project_name}"
-    project-ENV="${ENV}"
-    created-by="${var.created_by}"
+    Project-NAME="${var.project_name}"
+    Project-ENV="${ENV}"
+    Created-By="${var.created_by}"
 }
 }
 
@@ -20,8 +20,8 @@ resource "aws_subnet" "public_subnet"
     availability_zone="${data.aws_availability_zones.main.names[count.index]}"
 tags={
     
-    Project-name="${var.project_name}"
-    project-ENV="${ENV}"
-    created-by="${var.created_by}"
+    Project-NAME="${var.project_name}"
+    Project-ENV="${ENV}"
+    Created-By="${var.created_by}"
 }
 }
