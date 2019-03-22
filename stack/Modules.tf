@@ -1,6 +1,6 @@
 Module "Network"
 {
-    source="./Modules/Network"
+    source="./Modules/Network/"
     ENV="${var.ENV}"
     Project-Name="${var.Project-Name}"
     created-by="${var.created-by}"
