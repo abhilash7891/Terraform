@@ -11,7 +11,7 @@ tags={
 }
 }
 
-resource "" "public_subnet"
+resource "aws_subnet" "public_subnet"
 {
  count="${length(var.public_subnet_cidr_block)}"
     vpc_id="${aws_vpc.main.id}"
