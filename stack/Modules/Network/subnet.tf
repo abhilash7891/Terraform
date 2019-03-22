@@ -12,7 +12,7 @@ tags={
 }
 }
 
-resource "aws_subnet" "public_subnet"
+/*resource "aws_subnet" "public_subnet"
 {
  count="${length(var.public_subnet_cidr_block)}"
     vpc_id="${aws_vpc.main.id}"
@@ -25,3 +25,4 @@ tags={
     Created-By="${var.created-by}"
 }
 }
+*/
